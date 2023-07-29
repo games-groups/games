@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  place-content: center space-between;
+}
+.header .logo {
+  max-width: 180px;
+}
+.header .logo > img {
+  width: 100%;
+}
+.header .navContainer {
+  display: flex;
+}
+.header .navContainer .navItem {
+  position: relative;
+  margin: 0 20px;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+  transition: 0.2s linear font-size;
+}
+.header .navContainer .navItem .navBadge {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  left: 0;
+  width: 10px;
+  margin: 0 auto;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #333;
+  border-left: 5px solid transparent;
+  opacity: 0;
+  transition: 0.2s linear opacity;
+}
+.header .navContainer .navItem.navSelected {
+  position: relative;
+  font-size: 20px;
+}
+.header .navContainer .navItem.navSelected .navBadge {
+  opacity: 1;
+}
+.header .connect {
+  padding: 12px 40px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #333;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}

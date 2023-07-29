@@ -1,0 +1,53 @@
+.headerContainer {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 8%) 0px 1px 12px 0px;
+  .headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    > img {
+      width: 100%;
+      max-width: 120px;
+    }
+  }
+  .headerNavContent {
+    height: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: 0.3s linear max-height;
+    &.headerNavHidden {
+      max-height: 0;
+    }
+    .headerNavList {
+      .headerNavItem {
+        padding: 25px 0;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        &.navDisabled {
+          color: #999;
+        }
+      }
+    }
+    .contractContainer {
+      padding: 25px 0;
+      text-align: center;
+
+      > button {
+        padding: 12px 40px;
+        color: #fff;
+        font-size: 16px;
+        background-color: #333;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}

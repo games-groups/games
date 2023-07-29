@@ -1,0 +1,64 @@
+.headerContainer {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 120px;
+  padding-bottom: 0;
+  color: #333;
+  place-content: center space-between;
+  .logo {
+    max-width: 180px;
+    > img {
+      width: 100%;
+    }
+  }
+
+  .headerNavList {
+    display: flex;
+    .headerNavItem {
+      position: relative;
+      margin: 0 20px;
+      font-size: 16px;
+      line-height: 26px;
+      cursor: pointer;
+      transition: 0.2s linear font-size;
+
+      .navBadge {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        width: 10px;
+        margin: 0 auto;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid currentColor;
+        border-left: 5px solid transparent;
+        opacity: 0;
+        transition: 0.2s linear opacity;
+      }
+      &.navSelected {
+        position: relative;
+        font-size: 20px;
+        .navBadge {
+          opacity: 1;
+        }
+      }
+      &.navDisabled {
+        color: #999;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .contractUs {
+    padding: 12px 40px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #333;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

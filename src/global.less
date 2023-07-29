@@ -1,0 +1,68 @@
+@import "~animate.css/animate.css";
+@import "~antd/dist/antd.css";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "PingFang SC";
+}
+
+.card-padding {
+  padding: 0 120px;
+}
+
+.linear-bg {
+  --filterValue: 30px;
+  position: relative !important;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #333 !important;
+
+  &::before {
+    position: absolute;
+    top: 0 !important;
+    left: -5% !important;
+    z-index: -1 !important;
+    display: block !important;
+    width: 50%;
+    height: 100%;
+    background: rgba(254, 173, 252, 0.6) !important;
+    opacity: 1 !important;
+    filter: blur(var(--filterValue)) !important;
+    animation: none !important;
+    content: "" !important;
+  }
+
+  &::after {
+    position: absolute;
+    right: -5% !important;
+    bottom: 0 !important;
+    left: auto !important;
+    z-index: -1 !important;
+    display: block !important;
+    width: 50%;
+    height: 100%;
+    background: rgba(173, 235, 254, 0.6) !important;
+    opacity: 1 !important;
+    filter: blur(var(--filterValue)) !important;
+    animation: none !important;
+    content: "";
+  }
+}
+
+.disabled-btn {
+  color: #666 !important;
+  background-color: #999 !important;
+  border-color: #999 !important;
+  cursor: not-allowed !important;
+}
+
+.ant-table-tbody > tr.ant-table-placeholder:hover > td {
+  background: transparent !important;
+}
+
+.ant-btn-loading {
+  opacity: 0.65;
+}
